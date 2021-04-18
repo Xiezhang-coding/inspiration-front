@@ -42,6 +42,7 @@ class Msg extends Component {
         return (
             <div className="center-block" style={{width: 800}}>
                 <div style={{display: "flex", justifyContent: "space-between"}}>
+                    <div style={{textAlign: "center", margin: "auto auto"}}>当前房间：{Constant.TOPIC}</div>
                     <div style={{textAlign: "center", margin: "auto auto"}}>当前用户：{this.props.user.name}</div>
                     <div>
                         <button className="btn btn-default" type="button" onClick={this.clearTopicMsg}>清空数据

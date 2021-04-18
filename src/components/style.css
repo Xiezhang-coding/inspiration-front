@@ -205,7 +205,7 @@
   border-radius: 3px;
   max-width: 60%;
   line-height: 24px;
-  font-size: 18px;
+  font-size: 16px;
   word-break: break-all;
   min-height: 36px;
   margin: 0px;
@@ -226,16 +226,32 @@
   position: absolute;
 }
 .message-item-other{
-  padding-left: 50px;
+  padding-left: 30px;
+}
+.message-item-other .message-name{
+}
+.message-item-other .message-content{
 }
 .message-item-other .message-item-avatar{
   left: 5px;
 }
 .message-item-other .message-item-content{
-  float: left;
   background-color: #d7e4f4;
-  position: relative;
+  left: 20px;
 }
+.message-item-own{
+  padding-right: 30px;
+}
+
+.message-item-own .message-item-content{
+  float: right;
+  display: inline-block;
+  right: 20px;
+}
+
+.message-item-own .message-name{
+}
+
 .message-item-own .message-item-content .error-status{
   width: 32px;
   position: absolute;
@@ -248,15 +264,11 @@
   width: 100%;
   display: block;
 }
-.message-item-own{
-  padding-right: 50px;
-}
+
 .message-item-own .message-item-avatar{
   right: 5px;
 }
-.message-item-own .message-item-content{
-  float: right;
-}
+
 .message-item-own .message-item-content:before {
   right: -10px;
   border-right: 12px solid transparent;

@@ -171,7 +171,7 @@ export default class Messages extends Component {
         let startTimeStamp = 0;
         return data.map((item, itemIndex) => {
             const {
-                timestamp, value, userInfo = {}, error
+                timestamp, value, t, userInfo = {}, error
             } = item;
             const {avatar, userId, name} = userInfo;
             const split = value.split(re);
@@ -241,7 +241,14 @@ export default class Messages extends Component {
             })}>
                 {timeInfoNode}
                 <div className={`message-item ${isOwn ? 'message-item-own' : 'message-item-other'}`}>
-                    <div className="message-item-content">{userInfo.name}:{content}</div>
+                    <img
+                        className="message-item-avatar"
+                        src={require('../imgs/head.png')}
+                    />
+                    <div className="message-item-content">
+                        <span className="message-name">{userInfo.name}（{t}）：</span>
+                        <span className="message-content">{content}</span>
+                    </div>
                 </div>
             </div>);
         });

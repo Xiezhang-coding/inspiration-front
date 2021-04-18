@@ -37,7 +37,8 @@ class App extends Component {
                             name: msg.userName,
                             userId: msg.userId
                         },
-                        value: msg.msg + "_" + msg.num
+                        value: msg.msg + "_seq" + msg.num,
+                        t: new Date(msg.timestamp).toLocaleString()
                     };
                     this.props.setTimestamp(msg.timestamp);
                     this.props.addMsg(useMsg);
